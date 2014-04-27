@@ -1,3 +1,14 @@
+Lockdown: Compliance (The Undertitle)
+===========================
+
+Our entry for [Ludum Dare #29](http://www.ludumdare.com/compo/ludum-dare-29/)
+
+## Authors
+
+- Seth Toles (Art, Sound, Game Design)
+- Merlyn Morgan-Graham (Programming, Game Design)
+
+
 Brunch with Jade, Stylus & CoffeeScript
 ===========================
 
