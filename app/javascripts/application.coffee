@@ -1,7 +1,6 @@
-Hello = require 'hello'
-
 module.exports = class Application
     constructor: ->
-
-        hai = new Hello 'CoffeeScript'
-        hai.echo()
+        canvas = document.getElementsByTagName('canvas')[0]
+        context = canvas.getContext('2d')
+        canvas.width = 640
+        canvas.height = 480
