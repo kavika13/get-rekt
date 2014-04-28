@@ -10,16 +10,16 @@ module.exports = class Application
         @viewportPixelY = 0
 
         @KEY_NAME_TO_CODE_MAP = {
-            'space': 32,
-            'left': 37,
-            'up': 38,
-            'right': 39,
-            'down': 40,
-            'a':65,
-            'w':87,
-            's':83,
-            'd':68,
-            'p':80,
+            'space': 32
+            'left': 37
+            'up': 38
+            'right': 39
+            'down': 40
+            'a':65
+            'w':87
+            's':83
+            'd':68
+            'p':80
         }
         @keyStates = {}
 
@@ -71,8 +71,8 @@ module.exports = class Application
         playerPixelX = @playerTileX * @TILE_WIDTH
         playerPixelY = @playerTileY * @TILE_HEIGHT
 
-        @viewportPixelX = playerPixelX - @VIEWPORT_WIDTH / 2
-        @viewportPixelY = playerPixelY - @VIEWPORT_HEIGHT / 2
+        @viewportPixelX = (playerPixelX + @personImage.width / 2) - @VIEWPORT_WIDTH / 2
+        @viewportPixelY = (playerPixelY + @personImage.height / 2) - @VIEWPORT_HEIGHT / 2
 
         mapWidth = @levelWidth * @TILE_WIDTH
         mapHeight = @levelHeight * @TILE_HEIGHT
@@ -82,11 +82,15 @@ module.exports = class Application
         @viewportPixelY = if @viewportPixelY >= 0 then @viewportPixelY else 0
 
     draw: ->
-        @drawImage @backgroundImage, -@viewportPixelX, -@viewportPixelY
-        @drawImage @personImage, @playerTileX * @TILE_WIDTH - @viewportPixelX, (@playerTileY - 1) * @TILE_HEIGHT - @viewportPixelY
+        @drawImage @backgroundImage, 0, 0
+        @drawImage @personImage, @playerTileX * @TILE_WIDTH, (@playerTileY - 1) * @TILE_HEIGHT
 
     drawImage: (image, x, y) ->  # TODO: sourceX, sourceY, sourceWidth, sourceHeight
-        @context.drawImage image, x * @IMAGE_SCALE, y * @IMAGE_SCALE, image.width * @IMAGE_SCALE, image.height * @IMAGE_SCALE
+        @context.drawImage image,
+            (x - @viewportPixelX) * @IMAGE_SCALE,
+            (y - @viewportPixelY) * @IMAGE_SCALE,
+            image.width * @IMAGE_SCALE,
+            image.height * @IMAGE_SCALE
 
     loadContent: ->
         @backgroundImage = new Image()
