@@ -94,7 +94,7 @@ module.exports = class Application
 
     loadContent: ->
         @backgroundImage = new Image()
-        @backgroundImage.src = "images/bg.jpg"
+        @backgroundImage.src = "images/map.gif"
 
         @personImage = new Image()
         @personImage.src = "images/person.png"
