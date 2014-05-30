@@ -14,6 +14,10 @@
             "name": "app"
         },
         {
+            "path": "./aux",
+            "name": "aux"
+        },
+        {
             "folder_exclude_patterns":
             [
                 ".*"
