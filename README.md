@@ -25,4 +25,4 @@ Pay attention to the prompts to see how to point your browser to the application
 
 ## More Information
 
-* [[How the project was setup originally|OriginalProjectSetup]]
+- [How the project was setup originally](https://github.com/kavika13/get-rekt/wiki/Original-Project-Setup)
