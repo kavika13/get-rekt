@@ -10,45 +10,19 @@ Our entry for [Ludum Dare #29](http://www.ludumdare.com/compo/ludum-dare-29/)
 
 ## Developing on the project
 
-- We built it on OSX, so our scripts may or may not work for you
-- You need python/pip/virtualenv installed on your box, and working in the path
-- You need brunch (see below)
-- Run:
+- You need npm installed on your box, and working in the path
+- You need [brunch](https://github.com/brunch/brunch) - *`npm install -g brunch` (use `sudo` if necessary)*
+- You need to install the dependencies for the project - *`npm install` in the project root directory*
+
+- To launch the project, run:
 ```
-./dev_env.sh
 brunch w -s
 ```
 
-*(TODO: maybe the brunch server launch should be part of dev_env.sh?)*
+Pay attention to the prompts to see how to point your browser to the application.
 
-Brunch with Jade, Stylus & CoffeeScript
 ===========================
 
-Super minimal brunch skeleton that includes jade and stylus plugins.
+## More Information
 
-Forked from [brunch-jade-stylus](https://github.com/TessaHarmon/brunch-jade-stylus) with CoffeeScript added.
-
-## Languages
-
-- [CoffeeScript](http://coffeescript.org/)
-- [Stylus](http://learnboost.github.com/stylus/)
-- [Jade](http://jade-lang.com/)
-
-## Features
-
- -
-
-## Plugins
-
-- [Brunch Auto-Reload](https://github.com/brunch/auto-reload-brunch)
-
-
-## Getting started
-
-```bash
-mkdir <projectName>
-cd <projectName>
-brunch new gh:KATT/brunch-jade-stylus-coffee
-npm install
-brunch w -s
-```
+* [[How the project was setup originally|OriginalProjectSetup]]
