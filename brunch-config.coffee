@@ -16,19 +16,19 @@ exports.config =
                 'test/javascripts/test.js': /^test(\/|\\)(?!vendor)/
                 'test/javascripts/test-vendor.js': /^test(\/|\\)(?=vendor)/
             order:
-                before: []
+                before: /^app[\\/]walkabilityimages/
 
         stylesheets:
             joinTo:
                 'stylesheets/app.css': /^(app|vendor)/
                 'test/stylesheets/test.css': /^test/
             order:
-                before: ['app/styl/normalize.styl']
-                after: []
+                before: /normalize\.styl/
 
         # Ensure that our jade templates don't get compiled into our app JS.
         templates:
             joinTo: 'javascripts/template.js'
+
     modules:
         nameCleaner: (path) ->
             path = path.replace(/^app\//, '')

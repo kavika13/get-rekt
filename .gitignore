@@ -12,7 +12,6 @@ logs
 results
 
 node_modules
-pythonvenv
 npm-debug.log
 public
 
