@@ -13,9 +13,13 @@ Our entry for [Ludum Dare #29](http://www.ludumdare.com/compo/ludum-dare-29/)
 - We built it on OSX, so our scripts may or may not work for you
 - You need python/pip/virtualenv installed on your box, and working in the path
 - You need brunch (see below)
-- Run ./dev_env.sh
-- Run brunch w -s (TODO: maybe this should be part of dev_env.sh?)
+- Run:
+```
+./dev_env.sh
+brunch w -s
+```
 
+*(TODO: maybe the brunch server launch should be part of dev_env.sh?)*
 
 Brunch with Jade, Stylus & CoffeeScript
 ===========================
