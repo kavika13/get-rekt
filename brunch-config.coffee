@@ -7,6 +7,8 @@ exports.config =
             paths: [
                 './app/assets/images',
             ]
+        walkabilityImages:
+            pattern: /^app[\\/]maps[\\/].*\.png/
 
     files:
         javascripts:
@@ -16,7 +18,7 @@ exports.config =
                 'test/javascripts/test.js': /^test(\/|\\)(?!vendor)/
                 'test/javascripts/test-vendor.js': /^test(\/|\\)(?=vendor)/
             order:
-                before: /^app[\\/]walkabilityimages/
+                before: /^app[\\/]maps/
 
         stylesheets:
             joinTo:

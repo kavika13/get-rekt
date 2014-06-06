@@ -1,3 +1,6 @@
+main_walkability = require 'maps/main'
+main_properties = require 'maps/main_properties'
+
 module.exports = class Application
     constructor: ->
         @FPS = 60
@@ -26,10 +29,10 @@ module.exports = class Application
         @TILE_WIDTH = 16
         @TILE_HEIGHT = 16
 
-        @playerTileX = 0
-        @playerTileY = 0
-        @levelWidth = 128
-        @levelHeight = 128
+        @levelWidth = main_walkability.width
+        @levelHeight = main_walkability.height
+        @playerTileX = main_properties.startX
+        @playerTileY = main_properties.startY
 
         canvas = document.getElementsByTagName('canvas')[0]
         canvas.width = @VIEWPORT_WIDTH * @IMAGE_SCALE
@@ -51,6 +54,9 @@ module.exports = class Application
         isRightKeyPressed = @popKeyState 'right'
         isDownKeyPressed = @popKeyState 'down'
 
+        oldPlayerTileX = @playerTileX
+        oldPlayerTileY = @playerTileY
+
         if isLeftKeyPressed
             @playerTileX = @playerTileX - 1
 
@@ -62,6 +68,10 @@ module.exports = class Application
 
         if isDownKeyPressed
             @playerTileY = @playerTileY + 1
+
+        if main_walkability.contents[@playerTileX + main_walkability.width * @playerTileY] > 0
+            @playerTileX = oldPlayerTileX
+            @playerTileY = oldPlayerTileY
 
         @playerTileX = if @playerTileX >= 0 then @playerTileX else 0
         @playerTileY = if @playerTileY >= 0 then @playerTileY else 0
