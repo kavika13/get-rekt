@@ -1,7 +1,9 @@
 Lockdown: Compliance (The Undertitle)
 ===========================
 
-Our entry for [Ludum Dare #29](http://www.ludumdare.com/compo/ludum-dare-29/)
+Originally our entry for [Ludum Dare #29](http://www.ludumdare.com/compo/ludum-dare-29/), but we're slow as snails, so it didn't make it in time.
+
+Still intending to finish it though :)
 
 ## Authors
 
@@ -10,7 +12,7 @@ Our entry for [Ludum Dare #29](http://www.ludumdare.com/compo/ludum-dare-29/)
 
 ## Developing on the project
 
-- You need npm installed on your box, and working in the path
+- You need [node/npm](http://nodejs.org/) installed on your box, and working in the path
 - You need [brunch](https://github.com/brunch/brunch) - *`npm install -g brunch` (use `sudo` if necessary)*
 - You need to install the dependencies for the project - *`npm install` in the project root directory*
 
