@@ -25,6 +25,6 @@
         "uglify-js-brunch": "~1.7.6",
         "clean-css-brunch": "~1.7.1",
         "auto-reload-brunch": "~1.7.1",
-        "compile-walkability-image-brunch": "~0.0.0"
+        "compile-walkability-image-brunch": "git://github.com/kavika13/compile-walkability-image-brunch.git#master"
     }
 }
