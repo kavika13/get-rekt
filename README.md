@@ -13,12 +13,11 @@ Still intending to finish it though :)
 ## Developing on the project
 
 - You need [node/npm](http://nodejs.org/) installed on your box, and working in the path
-- You need [brunch](https://github.com/brunch/brunch) - *`npm install -g brunch` (use `sudo` if necessary)*
 - You need to install the dependencies for the project - *`npm install` in the project root directory*
 
-- To launch the project, run:
+- To launch the project, open your shell to the root folder of the project, and run:
 ```
-brunch w -s
+./run_dev_server.sh
 ```
 
 Pay attention to the prompts to see how to point your browser to the application.
